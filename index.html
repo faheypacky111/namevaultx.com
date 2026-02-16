@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none'%3E%3Ccircle cx='32' cy='32' r='28' stroke='%23E8E8E8' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='19' stroke='%23E8E8E8' stroke-width='1'/%3E%3Ccircle cx='32' cy='32' r='5.5' fill='%23E8E8E8'/%3E%3Ccircle cx='32' cy='8' r='3' fill='%23E8E8E8'/%3E%3Ccircle cx='32' cy='56' r='3' fill='%23E8E8E8'/%3E%3Ccircle cx='8' cy='32' r='3' fill='%23E8E8E8'/%3E%3Ccircle cx='56' cy='32' r='3' fill='%23E8E8E8'/%3E%3C/svg%3E">
     <title>NameVaultX - Premium Domains</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,9 +12,9 @@
         :root {
             --neon-cyan: #E8E8E8;
             --neon-blue: #BDBDBD;
-            --deep-black: #222222;
-            --dark-grey: #2c2c2c;
-            --mid-grey: #363636;
+            --deep-black: #1a1a1a;
+            --dark-grey: #242424;
+            --mid-grey: #2e2e2e;
             --light-grey: #9e9e9e;
             --accent-purple: #d0d0d0;
         }
@@ -326,23 +327,6 @@
             color: var(--neon-cyan);
         }
 
-        a.contact-link {
-            text-decoration: none;
-            display: inline-block;
-            position: relative;
-            z-index: 2;
-            padding: 8px 20px;
-            border: 1px solid var(--neon-cyan);
-            border-radius: 25px;
-            transition: all 0.3s;
-        }
-
-        a.contact-link:hover {
-            color: #222222;
-            background: var(--neon-cyan);
-            text-shadow: none;
-        }
-
         .domain-badge {
             position: absolute;
             top: 20px;
@@ -504,14 +488,14 @@
 
         <!-- Hero Section -->
         <section class="hero">
-            <p>A Domain is a Company's Permanent World Headquarters, its Primary Point of Control, Credibility, and Commerce.</p>
+            <p>A domain is a company's permanent world headquarters, its primary point of control, credibility, and commerce.</p>
             <a href="#contact" class="cta-button">Explore Portfolio</a>
         </section>
 
         <!-- Portfolio Section -->
         <section class="portfolio-section" id="portfolio">
             <h2 class="section-title">Featured Domains</h2>
-            <p class="section-subtitle">Handpicked, Premium Domain Names Ready to Become the Foundation of Your Next Venture. Each Domain Represents a Unique Opportunity in the Digital Landscape.</p>
+            <p class="section-subtitle">Handpicked, premium domain names ready to become the foundation of your next venture. Each domain represents a unique opportunity in the digital landscape.</p>
 
             <div class="domain-grid">
                 <div class="domain-card reveal active">
@@ -519,7 +503,7 @@
                     <div class="domain-category">Crypto & Finance</div>
                     <div class="domain-name">SixFigureBitcoin.com</div>
                     <div class="domain-description">Perfect for cryptocurrency investment platforms, Bitcoin trading education, or financial advisory services focused on high-value crypto assets.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20SixFigureBitcoin.com" class="domain-price contact-link">Contact Us</a>
+                    <div class="domain-price">Contact Us</div>
                 </div>
 
                 <div class="domain-card reveal active">
@@ -527,7 +511,7 @@
                     <div class="domain-category">AI & Technology</div>
                     <div class="domain-name">Seriels.ai</div>
                     <div class="domain-description">Ideal for AI-powered content platforms, machine learning series products, or sequential data analysis tools in the artificial intelligence space.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20Seriels.ai" class="domain-price contact-link">Contact Us</a>
+                    <div class="domain-price">Contact Us</div>
                 </div>
 
                 <div class="domain-card reveal active">
@@ -535,7 +519,7 @@
                     <div class="domain-category">AI & Technology</div>
                     <div class="domain-name">Nuked.ai</div>
                     <div class="domain-description">A powerful, brandable domain for disruptive AI startups, data destruction services, or transformative artificial intelligence solutions.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20Nuked.ai" class="domain-price contact-link">Contact Us</a>
+                    <div class="domain-price">Contact Us</div>
                 </div>
 
                 <div class="domain-card reveal active">
@@ -543,7 +527,7 @@
                     <div class="domain-category">Crypto & Finance</div>
                     <div class="domain-name">AllForBitcoin.org</div>
                     <div class="domain-description">An authoritative domain for Bitcoin advocacy communities, cryptocurrency education nonprofits, or all-in-one Bitcoin resource hubs.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20AllForBitcoin.org" class="domain-price contact-link">Contact Us</a>
+                    <div class="domain-price">Contact Us</div>
                 </div>
 
                 <div class="domain-card reveal active">
@@ -551,7 +535,7 @@
                     <div class="domain-category">Crypto & Finance</div>
                     <div class="domain-name">BitcoinExplosion.com</div>
                     <div class="domain-description">A high-energy domain for cryptocurrency news platforms, Bitcoin market analysis tools, or viral crypto growth and trading communities.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20BitcoinExplosion.com" class="domain-price contact-link">Contact Us</a>
+                    <div class="domain-price">Contact Us</div>
                 </div>
 
                 <div class="domain-card reveal active">
@@ -559,7 +543,7 @@
                     <div class="domain-category">Crypto & Finance</div>
                     <div class="domain-name">BitcoinsFormula.com</div>
                     <div class="domain-description">Ideal for algorithmic crypto trading platforms, Bitcoin investment strategy guides, or quantitative analysis tools for digital currency markets.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20BitcoinsFormula.com" class="domain-price contact-link">Contact Us</a>
+                    <div class="domain-price">Contact Us</div>
                 </div>
 
                 <div class="domain-card reveal active">
@@ -567,7 +551,7 @@
                     <div class="domain-category">Personal & Branding</div>
                     <div class="domain-name">Gilberto.org</div>
                     <div class="domain-description">A distinguished personal brand domain perfect for professionals, artists, or organizations bearing the Gilberto name — timeless and memorable.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20Gilberto.org" class="domain-price contact-link">Contact Us</a>
+                    <div class="domain-price">Contact Us</div>
                 </div>
 
                 <div class="domain-card reveal active">
@@ -575,7 +559,7 @@
                     <div class="domain-category">Personal & Branding</div>
                     <div class="domain-name">Seaton.org</div>
                     <div class="domain-description">A clean, professional domain suited for family heritage sites, local community organizations, or personal branding for the Seaton name.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20Seaton.org" class="domain-price contact-link">Contact Us</a>
+                    <div class="domain-price">Contact Us</div>
                 </div>
 
                 <div class="domain-card reveal active">
@@ -583,7 +567,7 @@
                     <div class="domain-category">Business & Tech</div>
                     <div class="domain-name">Trico.io</div>
                     <div class="domain-description">A sleek, modern domain ideal for SaaS startups, tech platforms, or innovative business tools — short, punchy, and instantly brandable.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20Trico.io" class="domain-price contact-link">Contact Us</a>
+                    <div class="domain-price">Contact Us</div>
                 </div>
 
                 <div class="domain-card reveal active">
@@ -591,31 +575,7 @@
                     <div class="domain-category">AI & Technology</div>
                     <div class="domain-name">Violets.ai</div>
                     <div class="domain-description">A beautifully evocative domain for AI-powered creative tools, generative art platforms, or nature-inspired artificial intelligence brands.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20Violets.ai" class="domain-price contact-link">Contact Us</a>
-                </div>
-
-                <div class="domain-card reveal active">
-                    <div class="domain-badge">Premium</div>
-                    <div class="domain-category">Personal & Branding</div>
-                    <div class="domain-name">Darl.org</div>
-                    <div class="domain-description">A short, memorable domain perfect for personal branding, creative portfolios, or community organizations — distinctive and easy to recall.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20Darl.org" class="domain-price contact-link">Contact Us</a>
-                </div>
-
-                <div class="domain-card reveal active">
-                    <div class="domain-badge">Premium</div>
-                    <div class="domain-category">Business & Tech</div>
-                    <div class="domain-name">Avix.org</div>
-                    <div class="domain-description">A sharp, modern domain ideal for aviation technology firms, fintech platforms, or innovative tech ventures seeking a strong brand identity.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20Avix.org" class="domain-price contact-link">Contact Us</a>
-                </div>
-
-                <div class="domain-card reveal active">
-                    <div class="domain-badge">Premium</div>
-                    <div class="domain-category">AI & Technology</div>
-                    <div class="domain-name">ITExperts.ai</div>
-                    <div class="domain-description">A commanding domain for AI-driven IT consulting firms, managed services platforms, or intelligent tech support and automation solutions.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20ITExperts.ai" class="domain-price contact-link">Contact Us</a>
+                    <div class="domain-price">Contact Us</div>
                 </div>
             </div>
         </section>
@@ -638,7 +598,7 @@
                 <div class="footer-section">
                     <h4>Contact</h4>
                     <ul>
-                        <li><a href="mailto:admin@namevaultx.com">admin@namevaultx.com</a></li>
+                        <li><a href="/cdn-cgi/l/email-protection#4b2a2f2622250b252a262e3d2a3e273f3365282426"><span class="__cf_email__" data-cfemail="ceafaaa3a7a08ea0afa3abb8afbba2bab6e0ada1a3">[email&#160;protected]</span></a></li>
                     </ul>
                 </div>
             </div>
