@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none'%3E%3Ccircle cx='32' cy='32' r='28' stroke='%23E8E8E8' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='19' stroke='%23E8E8E8' stroke-width='1'/%3E%3Ccircle cx='32' cy='32' r='5.5' fill='%23E8E8E8'/%3E%3Ccircle cx='32' cy='8' r='3' fill='%23E8E8E8'/%3E%3Ccircle cx='32' cy='56' r='3' fill='%23E8E8E8'/%3E%3Ccircle cx='8' cy='32' r='3' fill='%23E8E8E8'/%3E%3Ccircle cx='56' cy='32' r='3' fill='%23E8E8E8'/%3E%3C/svg%3E">
     <title>NameVaultX - Premium Domains</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,9 +12,9 @@
         :root {
             --neon-cyan: #E8E8E8;
             --neon-blue: #BDBDBD;
-            --deep-black: #1a1a1a;
-            --dark-grey: #242424;
-            --mid-grey: #2e2e2e;
+            --deep-black: #222222;
+            --dark-grey: #2c2c2c;
+            --mid-grey: #363636;
             --light-grey: #9e9e9e;
             --accent-purple: #d0d0d0;
         }
@@ -32,7 +33,6 @@
             position: relative;
         }
 
-        /* Animated background grid */
         .bg-grid {
             position: fixed;
             top: 0;
@@ -52,7 +52,6 @@
             100% { transform: translate(50px, 50px); }
         }
 
-        /* Glow orbs */
         .glow-orb {
             position: fixed;
             border-radius: 50%;
@@ -84,7 +83,6 @@
             50% { transform: translate(100px, 100px); }
         }
 
-        /* Main container */
         .container {
             position: relative;
             z-index: 10;
@@ -93,7 +91,6 @@
             padding: 0 40px;
         }
 
-        /* Header */
         header {
             padding: 40px 0;
             display: flex;
@@ -156,75 +153,25 @@
             width: 100%;
         }
 
-        /* Hero section */
         .hero {
-            padding: 120px 0 80px;
+            padding: 120px 0 40px;
             text-align: center;
             animation: fadeInUp 1.2s ease;
-        }
-
-        h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 64px;
-            font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 30px;
-            background: linear-gradient(135deg, #ffffff, var(--neon-cyan), var(--neon-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -2px;
         }
 
         .hero p {
             font-size: 18px;
             max-width: 600px;
-            margin: 0 auto 50px;
+            margin: 0 auto;
             line-height: 1.8;
             color: var(--light-grey);
         }
 
-        .cta-button {
-            display: inline-block;
-            padding: 18px 50px;
-            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-blue));
-            color: #1a1a1a;
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 700;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-decoration: none;
-            border-radius: 50px;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s;
-            box-shadow: 0 4px 20px rgba(232, 232, 232, 0.2);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(232, 232, 232, 0.3);
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: left 0.5s;
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
-        }
-
-        /* Portfolio section */
-        .portfolio-section {
-            padding: 100px 0;
+        /* Carousel Section */
+        .carousel-section {
+            padding: 80px 0 100px;
+            text-align: center;
+            animation: fadeInUp 1.4s ease;
         }
 
         .section-title {
@@ -237,60 +184,68 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: fadeInUp 1s ease;
         }
 
         .section-subtitle {
             text-align: center;
             max-width: 700px;
-            margin: 0 auto 80px;
+            margin: 0 auto 60px;
             font-size: 16px;
             line-height: 1.8;
-            animation: fadeInUp 1.2s ease;
         }
 
-        /* Domain grid */
-        .domain-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 30px;
-            animation: fadeInUp 1.4s ease;
-        }
-
-        .domain-card {
-            background: linear-gradient(135deg, rgba(36, 36, 36, 0.9), rgba(46, 46, 46, 0.8));
-            border: 1px solid rgba(232, 232, 232, 0.1);
-            border-radius: 20px;
-            padding: 40px 30px;
+        .ticker-wrapper {
             position: relative;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: pointer;
-        }
-
-        .domain-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(232, 232, 232, 0.03), rgba(189, 189, 189, 0.03));
-            opacity: 0;
-            transition: opacity 0.4s;
+            overflow: hidden;
+            padding: 40px 0;
         }
 
-        .domain-card:hover::before {
+        .ticker-track {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .ticker-item {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 1px solid transparent;
+            user-select: none;
+            flex-shrink: 0;
+        }
+
+        .ticker-item.far {
+            font-size: 14px;
+            color: #444;
+            opacity: 0.4;
+        }
+
+        .ticker-item.near {
+            font-size: 20px;
+            color: #777;
+            opacity: 0.6;
+        }
+
+        .ticker-item.active {
+            font-size: 32px;
+            color: #ffffff;
             opacity: 1;
         }
 
-        .domain-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            border-color: var(--neon-cyan);
-            box-shadow: 0 20px 60px rgba(232, 232, 232, 0.15);
+        .domain-details {
+            margin-top: 40px;
+            min-height: 140px;
         }
 
-        .domain-category {
+        .domain-details .category {
             display: inline-block;
             font-size: 10px;
             text-transform: uppercase;
@@ -299,66 +254,39 @@
             background: rgba(232, 232, 232, 0.08);
             padding: 6px 14px;
             border-radius: 20px;
-            margin-bottom: 20px;
-            border: 1px solid rgba(232, 232, 232, 0.15);
+            margin-bottom: 16px;
         }
 
-        .domain-name {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 28px;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 15px;
-            letter-spacing: -1px;
-        }
-
-        .domain-description {
-            font-size: 14px;
-            line-height: 1.7;
+        .domain-details .description {
+            font-size: 15px;
+            line-height: 1.8;
             color: var(--light-grey);
-            margin-bottom: 25px;
+            max-width: 500px;
+            margin: 0 auto 28px;
         }
 
-        .domain-price {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--neon-cyan);
-        }
-
-
-        a.contact-link {
-            text-decoration: none;
+        .domain-details .contact-btn {
             display: inline-block;
-            position: relative;
-            z-index: 2;
-            padding: 8px 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--neon-cyan);
+            text-decoration: none;
+            padding: 12px 32px;
             border: 1px solid var(--neon-cyan);
             border-radius: 25px;
             transition: all 0.3s;
+            position: relative;
+            z-index: 2;
         }
 
-        a.contact-link:hover {
+        .domain-details .contact-btn:hover {
             color: #222222;
             background: var(--neon-cyan);
-            text-shadow: none;
         }
 
-        .domain-badge {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: linear-gradient(135deg, var(--neon-blue), var(--accent-purple));
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
-        }
-
-        /* Footer */
         footer {
             padding: 80px 0 40px;
             border-top: 1px solid rgba(232, 232, 232, 0.1);
@@ -368,8 +296,8 @@
 
         .footer-content {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 60px;
+            grid-template-columns: 2fr 1fr auto;
+            gap: 40px;
             margin-bottom: 60px;
         }
 
@@ -424,30 +352,16 @@
             color: var(--light-grey);
         }
 
-        /* Animations */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Responsive */
         @media (max-width: 1024px) {
             .footer-content {
                 grid-template-columns: 1fr 1fr;
@@ -455,45 +369,21 @@
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 48px;
-            }
-
-            .domain-grid {
-                grid-template-columns: 1fr;
-            }
-
-            nav {
-                gap: 20px;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-        }
-
-        /* Scroll reveal animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
+            .section-title { font-size: 36px; }
+            .ticker-item.active { font-size: 24px; }
+            .ticker-item.near { font-size: 16px; }
+            .ticker-item.far { font-size: 12px; }
+            nav { gap: 20px; }
+            .footer-content { grid-template-columns: 1fr; gap: 40px; }
         }
     </style>
 </head>
 <body>
-    <!-- Background elements -->
     <div class="bg-grid"></div>
     <div class="glow-orb glow-orb-1"></div>
     <div class="glow-orb glow-orb-2"></div>
 
     <div class="container">
-        <!-- Header -->
         <header>
             <div class="logo">NAMEVAULTX</div>
             <nav>
@@ -503,119 +393,38 @@
             </nav>
         </header>
 
-        <!-- Hero Section -->
         <section class="hero">
-            <p>A domain is a company's permanent world headquarters, its primary point of control, credibility, and commerce.</p>
-            <a href="#contact" class="cta-button">Explore Portfolio</a>
+            <p>A Domain is a Company's Permanent World Headquarters, its Primary Point of Control, Credibility, and Commerce.</p>
         </section>
 
-        <!-- Portfolio Section -->
-        <section class="portfolio-section" id="portfolio">
+        <section class="carousel-section" id="portfolio">
             <h2 class="section-title">Featured Domains</h2>
-            <p class="section-subtitle">Handpicked, premium domain names ready to become the foundation of your next venture. Each domain represents a unique opportunity in the digital landscape.</p>
+            <p class="section-subtitle">Handpicked, Premium Domain Names Ready to Become the Foundation of Your Next Venture. Each Domain Represents a Unique Opportunity in the Digital Landscape.</p>
 
-            <div class="domain-grid">
-                <div class="domain-card reveal active">
-                    <div class="domain-badge">Premium</div>
-                    <div class="domain-category">Crypto & Finance</div>
-                    <div class="domain-name">SixFigureBitcoin.com</div>
-                    <div class="domain-description">Perfect for cryptocurrency investment platforms, Bitcoin trading education, or financial advisory services focused on high-value crypto assets.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20SixFigureBitcoin.com" class="domain-price contact-link">Contact Us</a>
-                </div>
-
-                <div class="domain-card reveal active">
-                    <div class="domain-badge">Premium</div>
-                    <div class="domain-category">AI & Technology</div>
-                    <div class="domain-name">Seriels.ai</div>
-                    <div class="domain-description">Ideal for AI-powered content platforms, machine learning series products, or sequential data analysis tools in the artificial intelligence space.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20Seriels.ai" class="domain-price contact-link">Contact Us</a>
-                </div>
-
-                <div class="domain-card reveal active">
-                    <div class="domain-badge">Premium</div>
-                    <div class="domain-category">AI & Technology</div>
-                    <div class="domain-name">Nuked.ai</div>
-                    <div class="domain-description">A powerful, brandable domain for disruptive AI startups, data destruction services, or transformative artificial intelligence solutions.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20Nuked.ai" class="domain-price contact-link">Contact Us</a>
-                </div>
-
-                <div class="domain-card reveal active">
-                    <div class="domain-badge">Premium</div>
-                    <div class="domain-category">Crypto & Finance</div>
-                    <div class="domain-name">AllForBitcoin.org</div>
-                    <div class="domain-description">An authoritative domain for Bitcoin advocacy communities, cryptocurrency education nonprofits, or all-in-one Bitcoin resource hubs.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20AllForBitcoin.org" class="domain-price contact-link">Contact Us</a>
-                </div>
-
-                <div class="domain-card reveal active">
-                    <div class="domain-badge">Premium</div>
-                    <div class="domain-category">Crypto & Finance</div>
-                    <div class="domain-name">BitcoinExplosion.com</div>
-                    <div class="domain-description">A high-energy domain for cryptocurrency news platforms, Bitcoin market analysis tools, or viral crypto growth and trading communities.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20BitcoinExplosion.com" class="domain-price contact-link">Contact Us</a>
-                </div>
-
-                <div class="domain-card reveal active">
-                    <div class="domain-badge">Premium</div>
-                    <div class="domain-category">Crypto & Finance</div>
-                    <div class="domain-name">BitcoinsFormula.com</div>
-                    <div class="domain-description">Ideal for algorithmic crypto trading platforms, Bitcoin investment strategy guides, or quantitative analysis tools for digital currency markets.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20BitcoinsFormula.com" class="domain-price contact-link">Contact Us</a>
-                </div>
-
-                <div class="domain-card reveal active">
-                    <div class="domain-badge">Premium</div>
-                    <div class="domain-category">Crypto & Finance</div>
-                    <div class="domain-name">BitcoinJedi.com</div>
-                    <div class="domain-description">A bold, brandable domain for cryptocurrency influencers, Bitcoin trading masterminds, or crypto education platforms with a sharp edge.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20BitcoinJedi.com" class="domain-price contact-link">Contact Us</a>
-                </div>
-
-
-                <div class="domain-card reveal active">
-                    <div class="domain-badge">Premium</div>
-                    <div class="domain-category">Personal & Branding</div>
-                    <div class="domain-name">Seaton.org</div>
-                    <div class="domain-description">A clean, professional domain suited for family heritage sites, local community organizations, or personal branding for the Seaton name.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20Seaton.org" class="domain-price contact-link">Contact Us</a>
-                </div>
-
-                <div class="domain-card reveal active">
-                    <div class="domain-badge">Premium</div>
-                    <div class="domain-category">Business & Tech</div>
-                    <div class="domain-name">Trico.io</div>
-                    <div class="domain-description">A sleek, modern domain ideal for SaaS startups, tech platforms, or innovative business tools — short, punchy, and instantly brandable.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20Trico.io" class="domain-price contact-link">Contact Us</a>
-                </div>
-
-                <div class="domain-card reveal active">
-                    <div class="domain-badge">Premium</div>
-                    <div class="domain-category">AI & Technology</div>
-                    <div class="domain-name">Violets.ai</div>
-                    <div class="domain-description">A beautifully evocative domain for AI-powered creative tools, generative art platforms, or nature-inspired artificial intelligence brands.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20Violets.ai" class="domain-price contact-link">Contact Us</a>
-                </div>
-
-                <div class="domain-card reveal active">
-                    <div class="domain-badge">Premium</div>
-                    <div class="domain-category">AI & Technology</div>
-                    <div class="domain-name">HJH.ai</div>
-                    <div class="domain-description">A rare three-letter .ai domain — ultra-premium and versatile for AI startups, personal brand initials, or cutting-edge technology ventures.</div>
-                    <a href="mailto:admin@namevaultx.com?subject=Inquiry%20About%20HJH.ai" class="domain-price contact-link">Contact Us</a>
-                </div>
+            <div class="ticker-wrapper">
+                <div class="ticker-track" id="tickerTrack"></div>
             </div>
+
+            <div class="domain-details" id="domainDetails">
+                <div class="category" id="detailCategory"></div>
+                <div class="description" id="detailDescription"></div>
+                <a href="#" class="contact-btn" id="detailContact">Contact Us</a>
+            </div>
+
+
+        </section>
+
         <footer id="contact">
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>NAMEVAULTX</h3>
-                    <p>Connecting visionary entrepreneurs with the digital assets that will define tomorrow's brands.</p>
+                    <p>Connecting Visionary Entrepreneurs with the Digital Assets that Will Define Tomorrow's Brands.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Company</h4>
                     <ul>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#">Blog</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -631,9 +440,94 @@
         </footer>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        // Scroll reveal animation
-        function reveal() {
-            const reveals = document.querySelectorAll('.reveal');
-            
-            reveals.forEach(elem
+    <script>
+        const domains = [
+            { name: "SixFigureBitcoin.com", category: "Crypto & Finance", description: "Perfect for cryptocurrency investment platforms, Bitcoin trading education, or financial advisory services focused on high-value crypto assets." },
+            { name: "Seriels.ai", category: "AI & Technology", description: "Ideal for AI-powered content platforms, machine learning series products, or sequential data analysis tools in the artificial intelligence space." },
+            { name: "Nuked.ai", category: "AI & Technology", description: "A powerful, brandable domain for disruptive AI startups, data destruction services, or transformative artificial intelligence solutions." },
+            { name: "AllForBitcoin.org", category: "Crypto & Finance", description: "An authoritative domain for Bitcoin advocacy communities, cryptocurrency education nonprofits, or all-in-one Bitcoin resource hubs." },
+            { name: "BitcoinExplosion.com", category: "Crypto & Finance", description: "A high-energy domain for cryptocurrency news platforms, Bitcoin market analysis tools, or viral crypto growth and trading communities." },
+            { name: "BitcoinsFormula.com", category: "Crypto & Finance", description: "Ideal for algorithmic crypto trading platforms, Bitcoin investment strategy guides, or quantitative analysis tools for digital currency markets." },
+            { name: "BitcoinJedi.com", category: "Crypto & Finance", description: "A bold, brandable domain for cryptocurrency influencers, Bitcoin trading masterminds, or crypto education platforms with a sharp edge." },
+            { name: "Seaton.org", category: "Personal & Branding", description: "A clean, professional domain suited for family heritage sites, local community organizations, or personal branding for the Seaton name." },
+            { name: "Trico.io", category: "Business & Tech", description: "A sleek, modern domain ideal for SaaS startups, tech platforms, or innovative business tools — short, punchy, and instantly brandable." },
+            { name: "Violets.ai", category: "AI & Technology", description: "A beautifully evocative domain for AI-powered creative tools, generative art platforms, or nature-inspired artificial intelligence brands." },
+            { name: "Darl.org", category: "Personal & Branding", description: "A short, memorable domain perfect for personal branding, creative portfolios, or community organizations — distinctive and easy to recall." },
+            { name: "Avix.org", category: "Business & Tech", description: "A sharp, modern domain ideal for aviation technology firms, fintech platforms, or innovative tech ventures seeking a strong brand identity." },
+            { name: "ITExperts.ai", category: "AI & Technology", description: "A commanding domain for AI-driven IT consulting firms, managed services platforms, or intelligent tech support and automation solutions." },
+            { name: "HJH.ai", category: "AI & Technology", description: "A rare three-letter .ai domain — ultra-premium and versatile for AI startups, personal brand initials, or cutting-edge technology ventures." }
+        ];
+
+        let activeIndex = 0;
+        let autoRotate;
+        const track = document.getElementById('tickerTrack');
+
+        function buildTicker() {
+            track.innerHTML = '';
+            domains.forEach((d, i) => {
+                const item = document.createElement('div');
+                item.className = 'ticker-item';
+                item.textContent = d.name;
+                item.addEventListener('click', () => {
+                    setActive(i);
+                    resetAutoRotate();
+                });
+                track.appendChild(item);
+            });
+            setActive(0);
+        }
+
+        function setActive(index) {
+            activeIndex = index;
+            const items = track.querySelectorAll('.ticker-item');
+            const domain = domains[index];
+
+            items.forEach((item, i) => {
+                const dist = Math.abs(i - index);
+                item.className = 'ticker-item';
+                if (dist === 0) item.classList.add('active');
+                else if (dist === 1) item.classList.add('near');
+                else item.classList.add('far');
+            });
+
+            const activeItem = items[index];
+            const trackRect = track.parentElement.getBoundingClientRect();
+            const itemRect = activeItem.getBoundingClientRect();
+            const offset = itemRect.left + itemRect.width / 2 - trackRect.left - trackRect.width / 2;
+            const currentTransform = getComputedStyle(track).transform;
+            let currentX = 0;
+            if (currentTransform !== 'none') {
+                const matrix = new DOMMatrixReadOnly(currentTransform);
+                currentX = matrix.m41;
+            }
+            track.style.transform = 'translateX(' + (currentX - offset) + 'px)';
+
+            document.getElementById('detailCategory').textContent = domain.category;
+            document.getElementById('detailDescription').textContent = domain.description;
+            document.getElementById('detailContact').href = 'mailto:admin@namevaultx.com?subject=Inquiry%20About%20' + encodeURIComponent(domain.name);
+
+        }
+
+        function nextDomain() {
+            setActive((activeIndex + 1) % domains.length);
+        }
+
+        function prevDomain() {
+            setActive((activeIndex - 1 + domains.length) % domains.length);
+        }
+
+        function resetAutoRotate() {
+            clearInterval(autoRotate);
+            autoRotate = setInterval(nextDomain, 4000);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') { nextDomain(); resetAutoRotate(); }
+            if (e.key === 'ArrowLeft') { prevDomain(); resetAutoRotate(); }
+        });
+
+        buildTicker();
+        autoRotate = setInterval(nextDomain, 4000);
+    </script>
+</body>
+</html>
