@@ -171,6 +171,17 @@
             text-decoration: underline;
         }
 
+
+        .nav-x {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light-grey);
+            transition: color 0.3s;
+        }
+
+        .nav-x:hover { color: var(--neon-cyan); }
+        .nav-x::after { display: none !important; }
         footer {
             padding: clamp(50px, 8vw, 80px) 0 30px;
             border-top: 1px solid rgba(232, 232, 232, 0.1);
@@ -257,10 +268,7 @@
         }
 
 
-        @media (max-width: 700px) {
-            header { flex-direction: column; }
-            .footer-content { grid-template-columns: 1fr; text-align: center; }
-        }
+
     </style>
 </head>
 <body>
@@ -274,6 +282,11 @@
             <nav>
                 <a href="index.html#portfolio">Portfolio</a>
                 <a href="about.html">About</a>
+                <a href="https://x.com/namevaultx_" target="_blank" rel="noopener" aria-label="X (Twitter)" class="nav-x">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
             </nav>
         </header>
 
