@@ -168,6 +168,34 @@
             padding: 0 8px;
         }
 
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(232, 232, 232, 0.08);
+            color: var(--light-grey);
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: var(--neon-cyan);
+            color: #222;
+        }
+
+        .social-icons svg {
+            width: 16px;
+            height: 16px;
+        }
+
         footer {
             padding: clamp(50px, 8vw, 80px) 0 30px;
             border-top: 1px solid rgba(232, 232, 232, 0.1);
@@ -262,7 +290,6 @@
             <h1>About Us</h1>
             <p>NameVaultX is a curated portfolio of premium domain names, built for the visionary entrepreneurs who understand that a great name is the foundation of a great brand.</p>
             <p>We specialize in short, memorable, and highly brandable domains across crypto, AI, technology, and personal branding. Every name in our vault has been hand-selected for its potential to power the next generation of businesses.</p>
-            <p>Whether you're launching a startup, rebranding an existing venture, or investing in digital assets, we're here to help you find the name that will define your future. Transparent pricing, fair negotiations, and secure transfers — every step of the way.</p>
         </section>
 
         <footer>
@@ -283,6 +310,13 @@
                     <ul>
                         <li><a href="mailto:admin@namevaultx.com">admin@namevaultx.com</a></li>
                     </ul>
+                    <div class="social-icons">
+                        <a href="https://x.com/namevaultx" target="_blank" rel="noopener" aria-label="X (Twitter)">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
