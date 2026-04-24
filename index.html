@@ -211,9 +211,9 @@
         .ticker-track {
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: clamp(10px, 2vw, 20px);
             transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            width: max-content;
         }
 
         .ticker-item {
@@ -304,8 +304,9 @@
 
         .footer-content {
             display: grid;
-            grid-template-columns: 2fr 1fr auto;
-            gap: clamp(24px, 4vw, 40px);
+            grid-template-columns: 2fr auto auto;
+            gap: clamp(24px, 3vw, 40px);
+            justify-content: space-between;
             margin-bottom: clamp(30px, 6vw, 60px);
         }
 
@@ -407,8 +408,7 @@
             <div class="logo">NAMEVAULTX</div>
             <nav>
                 <a href="#portfolio">Portfolio</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+                <a href="about.html">About</a>
             </nav>
         </header>
 
@@ -442,7 +442,7 @@
                 <div class="footer-section">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="#about">About Us</a></li>
+                        <li><a href="about.html">About Us</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                     </ul>
                 </div>
@@ -510,16 +510,13 @@
             });
 
             const activeItem = items[index];
-            const trackRect = track.parentElement.getBoundingClientRect();
-            const itemRect = activeItem.getBoundingClientRect();
-            const offset = itemRect.left + itemRect.width / 2 - trackRect.left - trackRect.width / 2;
-            const currentTransform = getComputedStyle(track).transform;
-            let currentX = 0;
-            if (currentTransform !== 'none') {
-                const matrix = new DOMMatrixReadOnly(currentTransform);
-                currentX = matrix.m41;
-            }
-            track.style.transform = 'translateX(' + (currentX - offset) + 'px)';
+            requestAnimationFrame(() => {
+                const wrapper = track.parentElement;
+                const wrapperWidth = wrapper.offsetWidth;
+                const itemCenter = activeItem.offsetLeft + (activeItem.offsetWidth / 2);
+                const targetX = (wrapperWidth / 2) - itemCenter;
+                track.style.transform = 'translateX(' + targetX + 'px)';
+            });
 
             document.getElementById('detailCategory').textContent = domain.category;
             document.getElementById('detailDescription').textContent = domain.description;
@@ -562,6 +559,8 @@
 
         buildTicker();
         autoRotate = setInterval(nextDomain, 4000);
+
+        window.addEventListener('resize', () => setActive(activeIndex));
     </script>
 </body>
 </html>
